@@ -7,7 +7,7 @@ NAME ="openjdk-alpine"
 
 .PHONY:	build	run 
 build:
-	@echo "build container without using cache $(NAME)"
+	@echo "build container with using cache $(NAME)"
 	docker build -t $(NAME):$(TAG) .
 
 
@@ -17,7 +17,7 @@ build-nc:
 
 build-args:
 	@echo "build container with args"
-	docker build --build-args JAVA_BUILD=$(JAVA_BUILD) JAVA_AGENT=$(JAVA_AGENT) -t  $(NAME):$(TAG) . 
+	docker build --build-args JDK=$(JDK) JAVA_BUILD=$(JAVA_BUILD) JAVA_AGENT=$(JAVA_AGENT) -t  $(NAME):$(TAG) . 
 
 run:
 	@echo "Running docker container"
