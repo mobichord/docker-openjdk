@@ -1,15 +1,15 @@
-.PHONY:	build	run 
-
-export JDK ?="11"
-export JAVA_BUILD ?="28"
-export JAVA_AGENT ?="0.12.0"
-export TA ?="test" 
-USER ="mobichord"
+JDK ?="13"
+JAVA_BUILD ?="27"
+JAVA_AGENT ?="0.12.0"
+TAG ?="test" 
+USER ?="mobichord"
 NAME ="openjdk-alpine"
 
+.PHONY:	build	run 
 build:
 	@echo "build container with using cache $(NAME)"
 	docker build -t $(NAME):$(TAG) .
+
 
 build-nc:
 	@echo "build container --no-cache"
