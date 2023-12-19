@@ -11,3 +11,5 @@ It’s not production-ready because it hasn’t been tested thoroughly enough to
 Image with the full JDK is ~300MB. This build uses jlink to create custom JRE with modules required to run microservices based on Spring Boot 2.
 
 Size ~ 60MB 
+
+test
